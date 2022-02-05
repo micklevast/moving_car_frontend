@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cls {
+            display: inline-block;
+            position: relative;
+            border: 2px solid red;
+            background-color: yellow;
+            animation: Flycar 5s linear 1;
+        }
+
+        @keyframes Flycar {
+
+            0% {
+                /* transform: translateY(100px); */
+                top: 0px;
+            }
+
+            30% {
+                /* transform: translateX(100px); */
+                top: 100px;
+            }
+
+            70% {
+                /* transform: translateY(-100px); */
+                left: 100px;
+            }
+
+            100% {
+                /* transform: translateX(100px); */
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cls">this is moving box</div>
+</body>
+
+</html>

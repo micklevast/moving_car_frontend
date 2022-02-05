@@ -1,0 +1,73 @@
+The position property isn't declared in the above code and it therefore reverts to the default position:static. It follows the order of the HTML code.
+Whatever comes first in the HTML is shown first, and each element follows the next, creating the document 
+flow as I described above.
+
+
+What is position relative in CSS?
+position:relative works the same way as position:static;, but it lets you change an element's position.
+position:relative; changes the position of the element relative to the parent element and relative to itself 
+and where it would usually be in the regular document flow of the page. This means that it's relative to its
+original position within the parent element.
+
+
+The top, bottom, right, and left offsets push the tag away from where it's specified, working in reverse.
+top in fact moves the element towards the bottom of the element's parent container. bottom pushes the element
+ towards the top of the element's parent container, and so on.
+
+
+ position absolute?
+ They are not positioned based on their usual place in the document flow, but based on the position of their ancestor
+ If you want the coordinates to be applied to (child)its parent element, you need to relatively position the parent element by updating .parent while keeping .child to be absolute position:
+
+
+ ----------------------------------------------------------------------------
+ What are CSS Animations?
+An animation lets an element gradually change from one style to another.
+You can change as many CSS properties you want, as many times as you want.
+To use CSS animation, you must first specify some keyframes for the animation.
+Keyframes hold what styles the element will have at certain times.
+/* The animation code */
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+/* The element to apply the animation to */
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+Note: The animation-duration property defines how long an animation should take to complete. If the animation-duration
+ property is not specified, no animation will occur, because the default value is 0s (0 seconds). 
+
+//another way to defines keyframes
+/* The animation code */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+
+***Animation Shorthand Property***
+The example below uses six of the animation properties:
+animation: animamtion-name  animation-duration  animation-timing-function  animation-delay  animation-iteration-count  animation-fill-mode
+example:==>animamtion:example 5s reverse 2s infinite backwords
+
+@keyframes MoveCar{
+    33%{
+        transform: translateY(-500px);
+    }
+    67%{
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateY(500px);
+    }
+}
